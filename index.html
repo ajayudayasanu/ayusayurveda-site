@@ -39,9 +39,9 @@
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
-<!-- firebase import -->
+<!-- calender import -->
 
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css" rel="stylesheet" id="bootstrap-css">
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -656,27 +656,47 @@
                             </div>
 
                             <!--Comment Form-->
-                            <div class="form-alert">Your message has been sent. we will contact you soon</div>
+                            <div class="form-alert">Your message has been sent. we will contact you soon</div>     
+                            <div class="error-alert">please fill all required info</div>                        
                             <form  id="email-form">
                                 <div class="form-group">
                                     <div class="response"></div>
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="text" id="name" name="name" placeholder="Your Name">
+                                    <input type="text" id="name" name="name" placeholder="Your Name" required>
                                 </div>
 
-                                <!-- <div class="form-group">
-                                    <input type="email" name="email" placeholder="Your Email *">
-                                </div> -->
-
                                 <div class="form-group">
-                                    <input type="text" id="phone" name="phone" placeholder="Your Phone">
+                                    <input type="number" id="phone" name="phone" placeholder="Mobile Number (Preferably WhatsApp)" required>
                                 </div>
-                                
                                 <div class="form-group">
-                                    <textarea id="message" name="contact_message" placeholder="Tell us about Pasent"></textarea>
+                                    <select class="form-select" id="consultation_type"placeholder="hello" aria-label="Default select example">
+                                        <option hidden >select Type of Consultation Required </option>
+                                        <option value="Hospital visit">Hospital visit</option>
+                                        <option value="Video Call">Video Call</option>
+                                        <option value="Voice call">Voice call</option>
+                                        <option value="other">other</option>
+                                      </select>
                                 </div>
+                                <div class="form-group">
+                                    <select class="form-select" id="medical_concern" aria-label="Default select example">
+                                        <option hidden >select Medical Concern</option>
+                                        <option value="General Health">General Health</option>
+                                        <option value="Psychological">Psychological</option>
+                                        <option value="COVID-19 Related">COVID-19 Related</option>
+                                        <option value="other">other</option>
+                                      </select>
+                                </div>
+                                <div class="form-group">
+                                    <div class='input-group date datepicker-toggle' id='datepicker'>
+                                        <input type='text' class="form-control" placeholder="Choose appointment date" />
+                                        <span class="input-group-addon datepicker-toggle-button">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                              
                                 
                                 <div class="form-group">
                                     <button class="theme-btn btn-style-one bg-tealblue" type="submit" name="submit-form"><span class="btn-title">Submit</span></button>
@@ -863,6 +883,7 @@
 <!-- form submission js -->
 <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
 <script src="js/form-submission.js" ></script>
 </body>
 </html>
