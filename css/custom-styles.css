@@ -40,3 +40,9 @@
     padding-top: 12px;
     padding-left:6px
   }
+
+  .address-sublines{
+    font-size: 15px;
+    color: #666;
+    font-weight: 400;
+  }
