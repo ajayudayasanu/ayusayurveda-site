@@ -302,7 +302,9 @@
             <!-- Form box -->
             <div class="form-box">
                 <div class="contact-form">
-                    <form action="#" method="post" id="email-form">
+                  <div class="form-alert">Your message has been sent. we will contact you soon</div>  
+                    <div class="error-alert"></div>   
+                    <form  id="contact-email-form">
                         <div class="row">
                             <div class="form-group col-lg-12">
                                 <div class="response"></div>
@@ -310,27 +312,27 @@
 
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" name="username" class="username" placeholder="Full Name *">
+                                    <input type="text" name="username" id="name" class="username" placeholder="Full Name *">
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="email" name="email" class="email" placeholder="Email Address *">
+                                    <input type="text" id ="email"name="email" class="email" placeholder="Email Address">
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="text" name="username" class="username" placeholder="Your Phone">
+                                    <input type="text" id ="phone"name="phone" class="username" placeholder="Phone number *">
                                 </div>
                             </div>
                             
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <textarea name="contact_message" class="message" placeholder="message"></textarea>
+                                    <textarea name="contact_message" id="message"class="message" placeholder="message"></textarea>
                                 </div>
                                 
                             </div>
 
                             <div class="form-group col-lg-12 text-center pt-3">
-                                <button class="theme-btn btn-style-one" type="button" id="submit" name="submit-form"><span class="btn-title">Send Message</span></button>
+                                <button class="theme-btn btn-style-one" type="submit" id="submit" name="submit-form"><span class="btn-title">Send Message</span></button>
                             </div>
                         </div>
                     </form>
@@ -510,6 +512,10 @@
 
 <!-- Color Setting -->
 <script src="js/color-settings.js"></script>
+<!-- form submission js -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+<script src="js/contactusFormSubmission.js" ></script>
 </body>
 
 <!-- Mirrored from ary-themes.com/html/bold_touch/medicoz/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Sep 2020 14:53:38 GMT -->
