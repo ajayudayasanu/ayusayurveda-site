@@ -17,7 +17,7 @@ var database = firebase.database();
 var doctorEnquireRef = firebase.database().ref("doctorEnquire");
 
 // Listen for form submit
-document.getElementById("subin-doctor-enquire-form").addEventListener("submit", submitSubinEnquireForm);
+document.getElementById("anagha-doctor-enquire-form").addEventListener("submit", submitSubinEnquireForm);
 
 
 // subin enquire submit form
@@ -42,7 +42,7 @@ function submitSubinEnquireForm (e){
     name,
     phone,
     email,
-    doctor:"Subin Suresh",
+    doctor:"Anagha",
     message
   })
     // Show alert
@@ -54,7 +54,7 @@ function submitSubinEnquireForm (e){
     }, 3000);
 
     // Clear form
-    document.getElementById("subin-doctor-enquire-form").reset();
+    document.getElementById("anagha-doctor-enquire-form").reset();
   }
 }
 

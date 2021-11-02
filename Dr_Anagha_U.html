@@ -327,26 +327,28 @@
                         </div>
 
                         <!--Comment Form-->
-                        <form action="#" method="post" id="email-form">
+                        <div class="form-alert">Your message has been sent. we will contact you soon</div>  
+                        <div class="error-alert"></div>    
+                        <form id="anagha-doctor-enquire-form">
                             <div class="row">
                                 <div class="form-group col-lg-6 col-md-12">
-                                    <input type="text" name="username" placeholder="Your Name">
+                                    <input type="text" id="name" name="username" placeholder="Your Name">
                                 </div>
 
                                 <div class="form-group col-lg-6 col-md-12">
-                                    <input type="text" name="phone" placeholder="Your Phone">
+                                    <input type="text" id ="phone" name="phone" placeholder="Your Phone">
                                 </div>
 
                                 <div class="form-group col-lg-12 col-md-12">
-                                    <input type="email" name="email" placeholder="Your Email *">
+                                    <input type="email" id="email" name="email" placeholder="Your Email *">
                                 </div>
                                 
                                 <div class="form-group col-lg-12 col-md-12">
-                                    <textarea name="contact_message" placeholder="Tell us about Pasent"></textarea>
+                                    <textarea name="contact_message" id="message" placeholder="Tell us about Pasent"></textarea>
                                 </div>
                                 
                                 <div class="form-group col-lg-12 col-md-12">
-                                    <button class="theme-btn btn-style-one" type="button" name="submit-form"><span class="btn-title">Submit Query</span></button>
+                                    <button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="btn-title">Submit Query</span></button>
                                 </div>
                             </div>
                         </form>
@@ -604,6 +606,9 @@
 <script src="js/script.js"></script>
 <!-- Color Setting -->
 <script src="js/color-settings.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+<script src="js/DoctorAnaghaFormSubmission.js" ></script>
 </body>
 
 </html>
