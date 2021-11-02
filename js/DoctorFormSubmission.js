@@ -14,36 +14,38 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 var database = firebase.database();
 // Reference messages collection
-var messagesRef = firebase.database().ref("messages"); //issue here
+var messagesRef = firebase.database().ref("messages");
+var doctorEnquireRef = firebase.database().ref("doctorEnquire");
+
 // Listen for form submit
-document.getElementById("appoinment-form").addEventListener("submit", submitForm);
+document.getElementById("subin-doctor-enquire-form").addEventListener("submit", submitSubinEnquireForm);
 
-// Submit form
-function submitForm(e) {
+
+// subin enquire submit form
+function submitSubinEnquireForm (e){
   e.preventDefault();
-
   // Get values
   var name = getInputVal("name");
   var phone = getInputVal("phone");
-  var consultation_type = getInputVal("consultation_type");
-  var medical_concern = getInputVal("medical_concern");
-  
-  //validation
+  var email = getInputVal("email");
+  var message = getInputVal("message");
+ // validation
   if(name ===''){
     showErrorMsg('please enter your name')
-  } else if (phone===''){
-    showErrorMsg('please enter your Phone number')
-  } else if(phone.length !== 10){
+  } else if( phone==''){
+    showErrorMsg('please enter your phone number')
+  } else if(phone.length !==10){
     showErrorMsg('Phone number must have 10 digits')
-  } 
-  else if (consultation_type === "Type of Consultation Required") {
-    showErrorMsg('please select a consulattion type');
-  } else if (medical_concern === "select Medical Concern") {
-    showErrorMsg('please select a medical concern');
   } else {
-    // Save message
-    saveMessage(name, phone, consultation_type,medical_concern);
 
+  var doctorEnquire =doctorEnquireRef.push()
+  doctorEnquire.set({
+    name,
+    phone,
+    email,
+    doctor:"Subin Suresh",
+    message
+  })
     // Show alert
     document.querySelector(".form-alert").style.display = "block";
 
@@ -53,7 +55,7 @@ function submitForm(e) {
     }, 3000);
 
     // Clear form
-    document.getElementById("appoinment-form").reset();
+    document.getElementById("subin-doctor-enquire-form").reset();
   }
 }
 
@@ -75,29 +77,3 @@ function showErrorMsg(msg) {
 function getInputVal(id) {
   return document.getElementById(id).value;
 }
-
-// Save message to firebase
-function saveMessage(name, phone, consultation_type,medical_concern) {
-  var newMessageRef = messagesRef.push();
-  newMessageRef.set({
-    name: name,
-    phone: phone,
-    consultation_type: consultation_type,
-    medical_concern: medical_concern,
-  });
-}
-
-
-$(function () {
-  $('#datepicker').datepicker({
-      format: "dd/mm/yyyy",
-      autoclose: true,
-      todayHighlight: true,
-    showOtherMonths: true,
-    selectOtherMonths: true,
-    autoclose: true,
-    changeMonth: true,
-    changeYear: true,
-    orientation: "button"
-  });
-});

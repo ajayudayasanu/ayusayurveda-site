@@ -46,3 +46,10 @@
     color: #666;
     font-weight: 400;
   }
+  .datepicker-toggle-button .fa-calendar-alt{
+    color: #5c6770;
+  }
+
+  .form-control.datepicker{
+    padding-left: 25px;
+  }
