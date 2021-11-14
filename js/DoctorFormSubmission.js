@@ -1,13 +1,12 @@
 // Initialize Firebase (ADD YOUR OWN DATA)
 var firebaseConfig = {
-  apiKey: "AIzaSyBZRi1FzjLAYrKSEjspi_xuXMTJIS4vNvY",
-  authDomain: "ayus-ayurveda.firebaseapp.com",
-  projectId: "ayus-ayurveda",
-  storageBucket: "ayus-ayurveda.appspot.com",
-  databaseURL: "https://ayus-ayurveda-default-rtdb.asia-southeast1.firebasedatabase.app",
-  messagingSenderId: "449799681631",
-  appId: "1:449799681631:web:ab9166d8f88ab8f20dcdea",
-  measurementId: "G-YRM44WH6BM",
+  apiKey: "AIzaSyB7gRcmJkZQ37HbQDQIkTPmrcIPkFoXSlY",
+  authDomain: "ayusayurdea.firebaseapp.com",
+  projectId: "ayusayurdea",
+  storageBucket: "ayusayurdea.appspot.com",
+  messagingSenderId: "764024855408",
+  appId: "1:764024855408:web:0d6fda3ee1f66d4e664db5",
+  measurementId: "G-5818K58QNZ"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
