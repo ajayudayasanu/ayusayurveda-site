@@ -13,7 +13,7 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 var database = firebase.database();
 // Reference messages collection
-var messagesRef = firebase.database().ref("messages"); //issue here
+var messagesRef = firebase.().ref("messages"); //issue here
 // Listen for form submit
 document.getElementById("appoinment-form").addEventListener("submit", submitForm);
 
